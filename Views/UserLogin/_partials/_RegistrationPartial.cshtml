@@ -1,0 +1,52 @@
+  
+@using time_tracker.Models
+@model UserModel
+
+<div class="container">
+    <table class="table">
+        <h3 class="display-4">Register</h3>
+        <form asp-action="Create" asp-controller="LoginUser" method="post">
+            <tr>
+                <td>
+                    <span asp-validation-for="FirstName"></span>
+                    <label asp-for="FirstName"></label>
+                    <br>
+                    <input asp-for="FirstName">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span asp-validation-for="LastName"></span>
+                    <label asp-for="LastName"></label>
+                    <br>
+                    <input asp-for="LastName">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span asp-validation-for="EmailAddress"></span>
+                    <label asp-for="EmailAddress"></label>
+                    <br>
+                    <input asp-for="EmailAddress">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span asp-validation-for="Password"></span>
+                    <label asp-for="Password"></label>
+                    <br>
+                    <input asp-for="Password">
+                    <br>
+                    <label asp-for="ConfirmPassword"></label>
+                    <br>
+                    <input name="ConfirmPassword" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="Create" value="Register">
+                </td>
+            </tr>
+        </form>
+    </table>
+</div>

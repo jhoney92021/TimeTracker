@@ -1,0 +1,32 @@
+
+@using time_tracker.ViewModels
+@model UserLoginViewModel
+
+<div class="container">
+    <table class="table">
+        <form asp-action="Login" asp-controller="UserLogin" method="post">
+            <h3 class="display-4">Login</h3>
+            <tr>
+                <td>
+                    <span asp-validation-for="EmailAddress"></span>
+                    <label asp-for="EmailAddress"></label>
+                    <br>
+                    <input asp-for="EmailAddress">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span asp-validation-for="Password"></span>
+                    <label asp-for="Password"></label>
+                    <br>
+                    <input asp-for="Password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="Login" value="Login">
+                </td>
+            </tr>
+    </form>
+</table>
+</div>
